@@ -1,0 +1,4 @@
+FROM python:2
+MAINTAINER Dmitry Shmelev, https://github.com/dshmelev
+
+RUN pip install git+https://github.com/ansible/ansible.git@%%ANSIBLE_VERSION%%

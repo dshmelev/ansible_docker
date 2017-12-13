@@ -1,0 +1,15 @@
+sudo: required
+services:
+- docker
+env:
+  matrix:
+  - ANSIBLE_VERSION=v1.9.4-1
+  - ANSIBLE_VERSION=v2.2.0.0
+  - ANSIBLE_VERSION=v2.4.2.0-1
+  global:
+  - DOCKER_REPO=avikez/ansible
+  - DOCKER_USER=avikez
+  - secure: Iyj8n1G8zOGyyeydTn7fRtESp1HjLsJSp52MITdhiYDywhSMyLw7Ao3GJLJHoFWj/Mqfzi8P5bQJTo+umKA3PYu10Rn0sem1dg7+/7LqzfV9VlGf2RIgYWzSrtyAiOUbTLdBuBXk1AKUR817nMOaUd3c+L6SrH0qfeFuWdHXBAYm0L+hk7UgpD18bWBDP8qPO4qUaEtmmd0cTL10ATGM9nqF+3fnhbB+ZltpKHLUVn2XSsl4fnP8bCsJElcTpIJr2fJox2iaYza6BkJ2TBQh3UjM009a38UcPSelxfxYSRPndXeD6BRImo2iyKhFvjt7fVTHb97Tz4HQpfU28CgdecFM+wler/6tl6nFAkaqCHFsfYz/FLxGgQHdHfYwROg90lV8aJeYqrifqOEif8T+tdIdGgKnp+InD3rO4jAQmh+s0RK/WIy3Yc9Y439oP/EcJm2Sz8x1WLEFHm/bCacgZHn4gfx2pLTUk2gTMh0lrgxrTU85k1T1ZBQuE03Q4v7W/Ug9yYwbUUnUy06wg5JWgmgJqlxwrmEiCH99y/jvd/MXIzYWoBwN0I2bNz45483zELADtB2gLzN32RFfScE5viNlThraaRD4i1GhLx/shx84L5QjA0D1nBdLZLpZKNFWudaNPoyQwAxQZsld4wGh23bSSDofVzoS34b40IcjojA=
+
+script:
+- "./build.sh"

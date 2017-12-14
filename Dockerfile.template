@@ -1,4 +1,8 @@
 FROM python:2
 MAINTAINER Dmitry Shmelev, https://github.com/dshmelev
 
+COPY ./entrypoint.sh /data/entrypoint.sh
 RUN pip install git+https://github.com/ansible/ansible.git@%%ANSIBLE_VERSION%%
+
+WORKDIR "/data"
+ENTRYPOINT ["/data/entrypoint.sh"]

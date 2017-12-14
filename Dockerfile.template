@@ -2,8 +2,7 @@ FROM python:2
 MAINTAINER Dmitry Shmelev, https://github.com/dshmelev
 
 COPY ./entrypoint.sh /data/entrypoint.sh
-RUN pip install boto
-RUN pip install boto3
+RUN pip install boto boto3
 RUN pip install git+https://github.com/ansible/ansible.git@%%ANSIBLE_VERSION%%
 
 WORKDIR "/data"
